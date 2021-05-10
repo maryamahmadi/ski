@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* the gradient will make the picture darker. using same color for start and end. */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/hero.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+section {
+  padding: 80px 0;
+}
+/* center vertically and horizontally */
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* fontsize 200% of html font size which is 20px. so it wil be 40px */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #039be5;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+h1 {
+  margin: 0;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+/* width is 70%, margin left is 15%, margin right is 15%. total will be 100%. our paragraph will be centered. */
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+.box {
+  padding: 15px;
+}
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+.icon-big {
+  font-size: 300%;
+  display: block;
+  color: #039be5;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  font-size: 80%;
+  color: #039be5;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #039be5;
+  border-bottom: 1px solid #039be5;
+  padding-bottom: 1px;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s, color 0.2s;
+}
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #039be5;
+  border: 1px solid #039be5;
+  border-radius: 200px;
+  margin-right: 20px;
+  color: #fff;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #039be5;
+  border-radius: 200px;
+  color: #039be5;
+}
+.btn-ghost:active,
+.btn-ghost:hover {
+  border: 1px solid #0277bd;
+  border-radius: 200px;
+  color: #fff;
+}
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #0277bd;
+  border: 1px solid #0277bd;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.5s;
+  padding: 5px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #039be5;
+  padding: 5px 0;
+}
+
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.meal-photo {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+.meal-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+.meal-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+.works-step {
+  margin: 0 auto 50px auto;
+  width: 400px;
+}
+.works-step > div {
+  color: 039be5;
+  border: 2px solid #039be5;
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  font-size: 150%;
+  float: left;
+  margin-right: 15px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.section-steps {
+  background-color: rgb(250, 250, 250);
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+.icon-small {
+  font-size: 120%;
+  color: #039be5;
+  margin-right: 5px;
+  width: 30px;
+  margin-right: 10px;
+  /*align the text and icon*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/back-customers.jpg);
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 2%;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+cite {
+  margin-top: 25px;
+  font-size: 90%;
+  display: block;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.section-plans {
+  background-color: rgb(250, 250, 250);
+}
+
+.plan-box {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 10%;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px rgb(245, 241, 241) solid;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.plan-box div:last-child {
+  text-align: center;
+  border: none;
+}
+.plan-price {
+  font-size: 300%;
+  font-weight: 100;
+  margin-top: 10px;
+  color: #039be5;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+.plan-price-meal {
+  font-size: 80%;
+}
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.contact-form {
+  width: 60%;
+  margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: solid 1px rgb(230, 229, 229);
+}
+
+textarea {
+  height: 100px;
+}
+
+input:focus {
+  border: none;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px;
+  font-size: 80%;
+}
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+.social-links {
+  list-style: none;
+  float: right;
+}
+.footer-nav li,
+.social-links li {
+  margin-right: 20px;
+  display: inline-block;
+}
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: none;
+  color: #888;
+  transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 140%;
+}
+.instagram-icon:hover {
+  color: #8a3ab9;
+}
+.facebook-icon:hover {
+  color: #4267b2;
+}
+.twitter-icon:hover {
+  color: #1da1f2;
+}
+
+.instagram-icon,
+.facebook-icon,
+.twitter-icon {
+  transition: color 0.2s;
+}
