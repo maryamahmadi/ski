@@ -103,7 +103,3 @@
     width: 40%;
   }
 }
-
-@media only screen and (max-width: 480px) {
-  /* these rules apply when width is <= 480px iphone*/
-}
